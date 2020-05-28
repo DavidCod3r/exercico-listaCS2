@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Proj.Entities
 {
-    class OutsourcedEmployee : Employees
+    class OutsourcedEmployee : Employee
     {
         public double AdditionalCharge { get; set; }
 
@@ -15,7 +15,7 @@ namespace Proj.Entities
 
         public override double Payment()
         {
-            return base.Payment() * 1.1;
+            return base.Payment() + 1.1 * AdditionalCharge;
         }
 
     }
